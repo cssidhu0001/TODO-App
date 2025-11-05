@@ -1,0 +1,277 @@
+/* 🌙 Global Theme */
+:root {
+  --bg-light: #f3f6fd;
+  --bg-dark: #111827;
+  --card-light: rgba(255, 255, 255, 0.8);
+  --card-dark: rgba(30, 41, 59, 0.9);
+  --primary: #4f46e5;
+  --secondary: #6366f1;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --text-light: #111;
+  --text-dark: #eee;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-light);
+  transition: all 0.4s ease;
+  color: var(--text-light);
+}
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.todo-container {
+  width: 90%;
+  max-width: 750px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: var(--card-light);
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+}
+
+body.dark-mode .todo-container {
+  background: var(--card-dark);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+  color: var(--primary);
+}
+
+.date-time {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* 🔘 Controls */
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.mode-toggle {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+}
+
+.mode-toggle:hover {
+  transform: translateY(-2px);
+  background: var(--secondary);
+}
+
+.filters select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+.filters select:hover {
+  border-color: var(--primary);
+}
+
+/* 📊 Progress Bar */
+.progress {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 15px;
+}
+
+progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background: #ddd;
+  border-radius: 6px;
+}
+
+progress::-webkit-progress-value {
+  background: var(--success);
+  border-radius: 6px;
+}
+
+/* ✅ Todo List Styling */
+.myUnOrdlist {
+  margin-top: 1.5rem;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .todo-item {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.todo-item.high {
+  border-left: 6px solid #ef4444;
+}
+
+.todo-item.medium {
+  border-left: 6px solid #facc15;
+}
+
+.todo-item.low {
+  border-left: 6px solid #22c55e;
+}
+
+.todo-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.todo-meta small {
+  font-size: 0.8rem;
+  color: #555;
+  margin-right: 4px;
+}
+
+.todo-desc {
+  font-size: 0.85rem;
+  color: #444;
+  opacity: 0.85;
+  padding-left: 4px;
+}
+
+.checkList {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.nonCheckList {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+body.dark-mode .nonCheckList {
+  color: #e0e0e0;
+}
+
+/* 🎯 Action Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.check-btn,
+.delete-btn {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.check-btn {
+  color: var(--success);
+}
+
+.delete-btn {
+  color: var(--danger);
+}
+
+.check-btn:hover {
+  transform: scale(1.15);
+}
+
+.delete-btn:hover {
+  transform: scale(1.15);
+}
+
+/* 🧹 Clear Section */
+.clear-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.clear-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: var(--shadow);
+}
+
+.clear-btn:hover {
+  transform: translateY(-2px);
+  background: #dc2626;
+}
+
+.empty-msg {
+  text-align: center;
+  opacity: 0.7;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .todo-container {
+    padding: 1.2rem;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
