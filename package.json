@@ -11,7 +11,7 @@
     "tasks"
   ],
   "license": "ISC",
-  "author": "Karan Joshi",
+  "author": "Charanjeet Singh Sidhu",
   "type": "module",
   "main": "eslint.config.js",
   "scripts": {

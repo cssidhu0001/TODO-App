@@ -73,7 +73,7 @@ export const Todo = () => {
     <section className="todo-container">
       <header>
         <h1>📝 Task List Management System</h1>
-        <h3>------By Karan Joshi----</h3>
+        <h3>------By Charanjeet Singh Sidhu----</h3>
         <TodoDate />
       </header>
 
