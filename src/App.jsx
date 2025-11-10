@@ -5,7 +5,7 @@ function App() {
 
   return (
     <main>
-      <Todo />
+      <Todo /> //main App
     </main>
   )
 }
